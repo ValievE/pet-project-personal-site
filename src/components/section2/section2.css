@@ -1,0 +1,47 @@
+.sec2 {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 65px 0;
+}
+.sec2__buttons {
+  display: flex;
+  gap: 0px 30px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.sec2__button {
+  display: inline-flex;
+  font-size: 18px;
+  padding: 38px 5px;
+  width: 100%;
+  max-width: initial;
+  max-height: 90px;
+}
+.sec2_1 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 30px;
+}
+.sec2_2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 30px;
+}
+.sec2_2__cardFlow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.sec2_1-timeline {
+  gap: 0 30px;
+  background: url("../../assets/sec2/img/icon_line.svg") center no-repeat;
+  background-size: 93% 100vh;
+}
+.section__timeline-items-fin {
+  justify-content: space-between;
+}
