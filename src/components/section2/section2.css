@@ -1,3 +1,13 @@
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from,
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
 .sec2 {
   flex-direction: column;
   justify-content: space-between;
@@ -33,9 +43,10 @@
 }
 
 .sec2_2 {
+  margin-top: 30px;
   display: flex;
   justify-content: space-between;
-  gap: 0 30px;
+  gap: 30px;
 }
 
 .sec2_2__cardFlow {
@@ -52,6 +63,23 @@
 
 .section__timeline-items-fin {
   justify-content: space-between;
+}
+
+.section2__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}
+
+.section2__text__title {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.section2__text__paragraph {
+  font-size: 16px;
+  transition: all linear 100ms;
 }
 
 @media (max-width: 990px) {
