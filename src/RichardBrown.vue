@@ -11,12 +11,13 @@
         <p class="header__text">Barcelona</p>
       </div>
       <ul class="header__menu">
-        <li class="header__text">Home</li>
-        <li class="header__text">Services</li>
-        <li class="header__text">Contacts</li>
+        <li @click="scrollToEl('section1')" class="header__text">Home</li>
+        <li @click="scrollToEl('section2')" class="header__text">Services</li>
+        <li @click="scrollToEl('section3')" class="header__text">Contacts</li>
       </ul>
+      <Header__Burger />
     </header>
-    <div class="section sec1">
+    <div ref="section1" class="section sec1">
       <div class="general__section">
         <h1 class="mainTitle">AAA-projects Game-designer</h1>
         <div class="general__textBlock">
@@ -27,93 +28,38 @@
             having all this, you can understand the entire aesthetics of what is
             happening on the screen.
           </p>
-          <button class="button button__general__textBlock">Contact me</button>
+          <button
+            @click="scrollToEl('section3')"
+            class="button button__general__textBlock"
+          >
+            Contact me
+          </button>
         </div>
       </div>
-      <div class="general__section">
+
+      <div class="general__section__images">
         <img class="general__section-img" src="./assets/general/image1.png" />
-      </div>
-      <div class="general__section">
         <img class="general__section-img" src="./assets/general/image2.png" />
       </div>
     </div>
-    <Section2 />
-    <!-- <div class="section sec2">
-      <h2 class="title_Medium">Fields I work for</h2>
-      <div class="sec2__buttons">
-        <button class="button button_active sec2__button">Concept</button>
-        <button class="button sec2__button">Mechanics</button>
-        <button class="button sec2__button">Graphics</button>
-      </div>
-      <div class="sec2_1">
-        <h2 class="title_Small">workflow</h2>
-        <div class="sec2_1-timeline section">
-          <div class="section">
-            <img
-              class="section__timeline-item"
-              src="./assets/sec2/img/icon_1.svg"
-            />
-          </div>
-          <div class="section">
-            <img class="ss" src="./assets/sec2/img/icon_2.svg" />
-          </div>
-          <div class="section section__timeline-items-fin">
-            <img
-              class="section__timeline-item"
-              src="./assets/sec2/img/icon_3.svg"
-            />
-            <img
-              class="section__timeline-item"
-              src="./assets/sec2/img/icon_fin.svg"
-            />
-          </div>
-        </div>
-        
-        <div class="sec2_2">
-          <div class="sec2_2__cardFlow">
-            <div class="sec2_2__card">
-              <h2 class="sec2_2__cardTitle">Briefing</h2>
-              <p class="sec2_2__cardParagraph">
-                At this point I discover what you need and how you need it to be
-                done
-              </p>
-            </div>
-          </div>
-          <div class="sec2_2__cardFlow">
-            <div class="sec2_2__card">
-              <h2 class="sec2_2__cardTitle">Sketches</h2>
-              <p class="sec2_2__cardParagraph">
-                I will work through ideas and create sketches to be sure we are
-                heading at the right direction
-              </p>
-            </div>
-          </div>
-          <div class="sec2_2__cardFlow">
-            <div class="sec2_2__card">
-              <h2 class="sec2_2__cardTitle">Designing</h2>
-              <p class="sec2_2__cardParagraph">
-                From sketches to detailed game characters, mechanics, cities
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <div class="section sec3">
-      <div class="section col sec3__col">
+    <div ref="section2" class="section sec2"><Section2 /></div>
+    <div ref="section3" class="section sec3">
+      <div class="section col sec3__col mediaLinks">
         <h2 class="title_Medium">Let`s make it</h2>
         <div class="contacts">
           <div class="contact">
             <p class="contact__title">Phone</p>
-            <a class="contact__link">+34 421 993-901</a>
+            <a class="contact__link" href="tel:+34421993901">+34 421 993-901</a>
           </div>
           <div class="contact">
             <p class="contact__title">Email</p>
-            <a class="contact__link">mail@rbrown.com</a>
+            <a class="contact__link" href="mailto:valievem@mail.ru"
+              >mail@rbrown.com</a
+            >
           </div>
           <div class="contact">
             <p class="contact__title">Social</p>
-            <a class="contact__link">+34 421 993-901</a>
+            <div class="mediaLinks__button"><mediaLinks__button /></div>
           </div>
         </div>
       </div>
@@ -130,11 +76,12 @@
       <div class="section col sec3__col aboutMeImg">
         <img
           class="aboutMeImg-item"
-          src="./assets/aboutMe/aboutMeImg.png"
+          src="./assets/sec3/aboutMe/aboutMeImg.png"
           alt="Richard Brown"
         />
       </div>
     </div>
+
     <footer class="footer">
       <p class="footer-section header__logo">Richard Brown</p>
       <p class="footer-section">2024 ⓒ все права защищены</p>
@@ -144,8 +91,15 @@
 
 <script>
 import Section2 from "./components/section2/section2.vue";
+import Header__Burger from "./components/header__burger/header__burger.vue";
+import mediaLinks__button from "./components/section3/mediaLinks/mediaLinks__button.vue";
 
 export default {
-  components: { Section2 },
+  components: { Section2, Header__Burger, mediaLinks__button },
+  methods: {
+    scrollToEl: function (section_name) {
+      eval(`this.$refs.${section_name}.scrollIntoView({ behavior: "smooth" })`);
+    },
+  },
 };
 </script>

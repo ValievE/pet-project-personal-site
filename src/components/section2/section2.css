@@ -4,14 +4,11 @@
   align-items: baseline;
   gap: 65px 0;
 }
-.sec2__buttons {
-  display: flex;
-  gap: 0px 30px;
-  justify-content: space-between;
-  align-items: center;
+.sec2__button {
   width: 100%;
 }
-.sec2__button {
+
+.sec2__button-item {
   display: inline-flex;
   font-size: 18px;
   padding: 38px 5px;
@@ -19,29 +16,59 @@
   max-width: initial;
   max-height: 90px;
 }
+
+.sec2__buttonss {
+  display: flex;
+  gap: 0px 30px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .sec2_1 {
   display: flex;
   width: 100%;
   flex-direction: column;
   gap: 30px;
 }
+
 .sec2_2 {
   display: flex;
   justify-content: space-between;
   gap: 0 30px;
 }
+
 .sec2_2__cardFlow {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-
 .sec2_1-timeline {
   gap: 0 30px;
   background: url("../../assets/sec2/img/icon_line.svg") center no-repeat;
   background-size: 93% 100vh;
 }
+
 .section__timeline-items-fin {
   justify-content: space-between;
+}
+
+@media (max-width: 990px) {
+  .sec2__button {
+    padding: 20px 5px;
+  }
+
+  .section__timeline-item {
+    max-width: 40px;
+  }
+}
+
+@media (max-width: 540px) {
+  .sec2__button {
+    padding: 20px 5px;
+  }
+  .sec2_1-timeline {
+    display: none;
+  }
 }
