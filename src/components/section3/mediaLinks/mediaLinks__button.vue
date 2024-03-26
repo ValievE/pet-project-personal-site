@@ -15,12 +15,21 @@
 </template>
 
 <script>
-import mediaLinks__button from "./mediaLinks__button.json";
-
 export default {
   data() {
     return {
-      dataJson: mediaLinks__button,
+      dataJson: [
+        {
+          name: "instagram",
+          logo: "./src/assets/sec3/mediaLinks/instagramLogo.svg",
+          link: "https://ru.wikipedia.org/wiki/Instagram",
+        },
+        {
+          name: "youtube",
+          logo: "./src/assets/sec3/mediaLinks/youtubeLogo.svg",
+          link: "https://www.youtube.com",
+        },
+      ],
     };
   },
 };
