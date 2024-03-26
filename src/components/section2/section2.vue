@@ -2,20 +2,17 @@
   <div class="section sec2">
     <h2 class="title_Medium">Fields I work for</h2>
     <div class="sec2__buttonss">
-      <div
-        class="sec2__button"
+      <button
         v-for="(nameButton, i) of sec2ButtonsInfo"
         :key="i"
+        class="sec2__button button sec2__button-item"
+        :class="{ 'button button_active sec2__button-item': ind === i }"
+        @click="ind = i"
       >
-        <button
-          class="button sec2__button-item"
-          :class="{ 'button button_active sec2__button-item': ind === i }"
-          @click="ind = i"
-        >
-          {{ nameButton }}
-        </button>
-      </div>
+        {{ nameButton }}
+      </button>
     </div>
+
     <div class="sec2_1">
       <h2 class="title_Small">workflow</h2>
       <div class="sec2_1-timeline section">
@@ -51,6 +48,7 @@
           <p class="section2__text__title">
             {{ cardInfoitem.title }}
           </p>
+
           <p class="section2__text__paragraph">
             {{ cardInfoitem.text }}
           </p>
@@ -71,11 +69,6 @@ export default {
     };
   },
   props: {},
-  watch: {
-    cardInfoitem(value) {
-      console.log(value, "value");
-    },
-  },
 };
 </script>
 

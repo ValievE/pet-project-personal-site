@@ -2,6 +2,10 @@
   display: none;
 }
 
+/* body {
+  overflow: v-bind(overflow);
+} */
+
 .header__burgerMenu_inactive {
   display: none;
 }
@@ -58,7 +62,7 @@
   background-color: black;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 700px) {
   .header__burger {
     display: flex;
     min-width: 50px;

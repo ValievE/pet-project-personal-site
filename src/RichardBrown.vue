@@ -15,7 +15,8 @@
         <li @click="scrollToEl('section2')" class="header__text">Services</li>
         <li @click="scrollToEl('section3')" class="header__text">Contacts</li>
       </ul>
-      <Header__Burger />
+
+      <Header__Burger @my-event="scrollToEl" />
     </header>
     <div ref="section1" class="section sec1">
       <div class="general__section">
@@ -42,7 +43,9 @@
         <img class="general__section-img" src="./assets/general/image2.png" />
       </div>
     </div>
-    <div ref="section2" class="section sec2"><Section2 /></div>
+    <div ref="section2" class="section sec2">
+      <Section2 />
+    </div>
     <div ref="section3" class="section sec3">
       <div class="section col sec3__col mediaLinks">
         <h2 class="title_Medium">Let`s make it</h2>
@@ -53,7 +56,7 @@
           </div>
           <div class="contact">
             <p class="contact__title">Email</p>
-            <a class="contact__link" href="mailto:valievem@mail.ru"
+            <a class="contact__link" href="mailto:mail@rbrown.com"
               >mail@rbrown.com</a
             >
           </div>
@@ -84,7 +87,7 @@
 
     <footer class="footer">
       <p class="footer-section header__logo">Richard Brown</p>
-      <p class="footer-section">2024 ⓒ все права защищены</p>
+      <p class="footer-section">2024 ⓒ все права незащищены</p>
     </footer>
   </div>
 </template>
