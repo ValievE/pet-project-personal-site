@@ -15,7 +15,6 @@
         <li @click="scrollToEl('section2')" class="header__text">Services</li>
         <li @click="scrollToEl('section3')" class="header__text">Contacts</li>
       </ul>
-
       <Header__Burger @my-event="scrollToEl" />
     </header>
     <div ref="section1" class="section sec1">

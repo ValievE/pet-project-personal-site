@@ -1,10 +1,11 @@
 <template>
   <button
     class="header__burger button header__text"
-    @click="(StatusActive = 1), scrollLock(true)"
+    @click="scrollLock(true), (StatusActive = 1)"
   >
     ...
   </button>
+
   <div
     :class="{
       'header__burgerMenu header__burgerMenu_active': StatusActive === 1,
@@ -59,10 +60,13 @@ export default {
   methods: {
     scrollLock: function (prop) {
       prop === true
-        ? (document.body.style.overflow = "hidden")
-        : (document.body.style.overflow = "visible");
+        ? ((document.body.style.overflow = "hidden"),
+          (document.body.style.position = "fixed"))
+        : ((document.body.style.overflow = "visible"),
+          (document.body.style.position = "static"));
     },
   },
+  watch: {},
 };
 </script>
 
