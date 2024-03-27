@@ -86,7 +86,7 @@
     </div>
 
     <footer class="footer">
-      <p class="footer-section header__logo">Richard Brown</p>
+      <p class="footer-section">Richard <br />Brown</p>
       <p class="footer-section">2024 ⓒ все права незащищены</p>
     </footer>
   </div>

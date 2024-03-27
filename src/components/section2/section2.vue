@@ -40,7 +40,7 @@
         </div>
       </div>
       <div class="sec2_2">
-        <div
+        <li
           class="section2__text"
           v-for="(cardInfoitem, i) in cardInfo[ind]"
           :key="i"
@@ -48,11 +48,10 @@
           <p class="section2__text__title">
             {{ cardInfoitem.title }}
           </p>
-
           <p class="section2__text__paragraph">
             {{ cardInfoitem.text }}
           </p>
-        </div>
+        </li>
       </div>
     </div>
   </div>

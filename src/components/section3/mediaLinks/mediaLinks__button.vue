@@ -21,12 +21,12 @@ export default {
       dataJson: [
         {
           name: "instagram",
-          logo: "./src/assets/sec3/mediaLinks/instagramLogo.svg",
+          logo: "/img/sec3/mediaLinks/instagramLogo.svg",
           link: "https://ru.wikipedia.org/wiki/Instagram",
         },
         {
           name: "youtube",
-          logo: "./src/assets/sec3/mediaLinks/youtubeLogo.svg",
+          logo: "/img/sec3/mediaLinks/youtubeLogo.svg",
           link: "https://www.youtube.com",
         },
       ],

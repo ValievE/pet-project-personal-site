@@ -51,7 +51,7 @@
 
 .burgerMenu__itemBack {
   position: absolute;
-  top: 90vh;
+  bottom: 5%;
   width: 100%;
   height: 100%;
   max-width: 80px;
