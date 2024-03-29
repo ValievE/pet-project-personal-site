@@ -27,7 +27,7 @@ export default {
         {
           name: "youtube",
           logo: "/img/sec3/mediaLinks/youtubeLogo.svg",
-          link: "https://www.youtube.com",
+          link: "https://youtu.be/dQw4w9WgXcQ?si=Z0RRYewqKP3yEovL",
         },
       ],
     };

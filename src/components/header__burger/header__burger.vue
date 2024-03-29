@@ -1,8 +1,5 @@
 <template>
-  <button
-    class="header__burger button header__text"
-    @click="scrollLock(true), (StatusActive = 1)"
-  >
+  <button class="header__burger button header__text" @click="StatusActive = 1">
     ...
   </button>
 
@@ -22,7 +19,7 @@
       <button
         class="burgerMenu__item"
         @click="
-          $emit('my-event(section1)'), (StatusActive = 0), scrollLock(false)
+          $emit('my-event', 'section1'), (StatusActive = 0), scrollLock(false)
         "
       >
         Home
@@ -57,15 +54,15 @@ export default {
     };
   },
   // props: ["scrollToEl"],
-  methods: {
-    scrollLock: function (prop) {
-      prop === true
-        ? ((document.body.style.overflow = "hidden"),
-          (document.body.style.position = "fixed"))
-        : ((document.body.style.overflow = "visible"),
-          (document.body.style.position = "static"));
-    },
-  },
+  // methods: {
+  //   scrollLock: function (prop) {
+  //     prop === true
+  //       ? ((document.body.style.overflow = "hidden"),
+  //         (document.body.style.position = "fixed"))
+  //       : ((document.body.style.overflow = "visible"),
+  //         (document.body.style.position = "static"));
+  //   },
+  // },
   watch: {},
 };
 </script>
