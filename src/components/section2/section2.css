@@ -1,0 +1,119 @@
+.sec2 {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 65px 0;
+}
+
+.sec2__button-item {
+  display: inline-flex;
+  font-size: 18px;
+  padding: 38px 5px;
+  width: 100%;
+  max-width: initial;
+  max-height: 90px;
+}
+
+.sec2__buttonss {
+  display: flex;
+  gap: 0px 30px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.sec2_1 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sec2_2 {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.sec2_2__cardFlow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sec2_1-timeline {
+  gap: 0 30px;
+  background: url("../../assets/sec2/img/icon_line.svg") center no-repeat;
+  background-size: 93% 100vh;
+}
+
+.section__timeline-items-fin {
+  justify-content: space-between;
+}
+
+.section2__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}
+
+@keyframes changeText {
+  from {
+    opacity: 100;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+.section2__text__title {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.section2__text__paragraph {
+  animation: changeText 50ms;
+  font-size: 16px;
+  transition: all linear 100ms;
+}
+
+@media (max-width: 990px) {
+  .sec2__button {
+    padding: 20px 5px;
+  }
+
+  .section__timeline-item {
+    max-width: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sec2__button {
+    padding: 20px 5px;
+  }
+
+  .sec2_1-timeline {
+    display: none;
+  }
+
+  .sec2__buttonss {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .sec2__button-item {
+    font-size: 20px;
+    height: 100px;
+  }
+
+  .sec2_2 {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .section2__text {
+    gap: 20px;
+  }
+}
