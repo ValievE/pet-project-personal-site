@@ -37,13 +37,21 @@ import { ref } from 'vue'
 
 const isBurgerMenuOpened = ref<boolean>(false)
 
+const windowWidth = ref<number>(document.body.clientWidth)
+
+window.onresize = () => {
+  windowWidth.value = window.innerWidth
+}
+
 const openBurger = () => {
-  isBurgerMenuOpened.value = !isBurgerMenuOpened.value
-  if (isBurgerMenuOpened.value) {
-    document.body.style.overflow = 'hidden'
-    return
+  if (windowWidth.value < 700) {
+    isBurgerMenuOpened.value = !isBurgerMenuOpened.value
+    if (isBurgerMenuOpened.value) {
+      document.body.style.overflow = 'hidden'
+      return
+    }
+    document.body.style.overflow = 'visible'
   }
-  document.body.style.overflow = 'visible'
 }
 </script>
 

@@ -15,7 +15,7 @@
 }
 
 .info {
-  background-image: url('/public/img/bg_figures.png');
+  background-image: url('/img/bg_figures.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: calc(100% / 3 * 2);
@@ -249,7 +249,7 @@
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('/public/img/self-img.png');
+  background-image: url('/img/self-img.png');
 }
 
 @media (max-width: 990px) {
